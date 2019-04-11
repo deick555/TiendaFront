@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="detail-tabs" style="padding: 25px 25px 25px 25px;">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="collapse" href="#Inventario-tab" id="InventarioTab">Inventario</a></li>
+        <li><a data-toggle="collapse" href="#Ventas-tab" id="VentasTab">Ventas</a></li>
+        <li><a data-toggle="collapse" href="#Clientes-tab" id="ClientesTab">Clientes</a></li>
+    </ul>
+    <div class="tab-content col-mt-5 " >
+        <div id="Inventario-tab">
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#InventarioAgregar-tab" id="InventarioAgregarTab">Agregar</a></li>
+                <li><a data-toggle="collapse" href="#InventarioConsulta-tab" id="InventarioConsultaTab">Consulta</a></li>
+                <li><a data-toggle="collapse" href="#InventarioModificar-tab" id="InventarioModificarTab">Modificar</a></li>
+            </ul>
+            <div id="InventarioAgregar-tab">
+                <label>Nombre Producto</label> <input class="form-control" id="NombreAgregar" type="text" name="Nombre" value="" placeholder="Nombre" />
+                <label>Precio producto</label> <input class="form-control" id="PrecioAgregar" type="text" name="Precio" value="" placeholder="Precio" />
+                <label>Piezas producto</label> <input class="form-control" id="PiezasAgregar" type="text" name="Piezas" value="" placeholder="Piezas" />
+                <br />
+                <button class="btn btn-success" id="btnAgregarInventario">
+                    Guardar
+                </button>
+            </div>
+            <div id="InventarioConsulta-tab" class="tab-pane fade in active">
+                <table class="table table-hover" id="Inventario-table">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>NameProduct</td>
+                            <td>Piezas</td>
+                            <td>Precio</td>
+
+                        </tr>
+                    </thead>
+                    <tbody id="Inventario-table-body"></tbody>
+                </table>
+            </div>
+            <div id="InventarioModificar-tab">
+                <label>Id Producto</label> <input class="form-control" id="IdModificar" type="text" name="Id" value="" placeholder="Id" />
+                <label>Precio producto</label> <input class="form-control" id="PrecioModificar" type="text" name="Precio" value="" placeholder="Precio" />
+                <label>Piezas producto</label> <input class="form-control" id="PiezasModificar" type="text" name="Piezas" value="" placeholder="Piezas" />
+                <br />
+                <button class="btn btn-success" id="btnModificarInventario">
+                    Guardar
+                </button>
+            </div>
+
+        </div>
+        <div id="Ventas-tab">
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#VentaAgregar-tab" id="VentaAgregarTab">Agregar</a></li>
+                <li><a data-toggle="collapse" href="#VentaConsulta-tab" id="VentaConsultaTab">Consulta</a></li>
+
+            </ul>
+            <div id="VentasAgregar-tab">
+                <label>Nombre Producto</label> <input class="form-control" id="NombreAgregar" type="text" name="Nombre" value="" placeholder="Nombre" />
+                <label>Precio producto</label> <input class="form-control" id="PrecioAgregar" type="text" name="Precio" value="" placeholder="Precio" />
+                <label>Piezas producto</label> <input class="form-control" id="PiezasAgregar" type="text" name="Piezas" value="" placeholder="Piezas" />
+                <label>Total Precio</label> <input class="form-control" id="TotalAgregar" type="text" name="Total" value="" placeholder="Total" />
+                <br />
+                <label>Total Compra</label> <input class="form-control" id="TotalCompraAgregar" type="text" name="TotalCompra" value="" placeholder="TotalCompra" />
+                <button class="btn btn-success" id="btnAgregarInventario">
+                    Guardar
+                </button>
+            </div>
+            <div id="VentaConsulta-tab">
+                <table class="table table-hover" id="Venta-table">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>NameProduct</td>
+                            <td>Piezas</td>
+                            <td>Precio</td>
+                            <td>Total</td>
+
+                        </tr>
+                    </thead>
+                    <tbody id="Venta-table-body"></tbody>
+                </table>
+            </div>
+
+        </div>
+        <div id="Clientes-tab" class="tab-pane fade disabled">
+            <h1>Hola clientes</h1>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Tienda")
